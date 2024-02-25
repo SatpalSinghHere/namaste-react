@@ -1,0 +1,88 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header>#nav-items {
+    display: flex;
+    list-style-type: none;
+}
+
+.header>#nav-items>* {
+    margin: 10px;
+    font-size: 24px;
+}
+
+.header>#nav-items>*:hover {
+    cursor: pointer;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+}
+
+#card-container {
+    width: 75%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#card-base {
+    height: 370px;
+    ;
+    width: 220px;
+
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-base:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: 0.2s;
+}
+
+#card-base>#card {
+    width: 90%;
+    height: 95%;
+}
+
+#card:hover{
+    width:95%;
+    height: 98%;
+    transition: 0.2s;
+}
+
+#card-base>#card>#food-image-div {
+    width: 100%;
+    height: 50%;
+    border-radius: 16px;
+    overflow:hidden;
+    
+}
+
+#food-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#card-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+}
+
+#food-type-logo {
+    width: 22px;
+}
+
+#res-name {
+    display: flex;
+    align-items: center;
+}
