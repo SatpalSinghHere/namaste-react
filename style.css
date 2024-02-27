@@ -55,7 +55,7 @@
 #card:hover{
     width:95%;
     height: 98%;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 #card-base>#card>#food-image-div {

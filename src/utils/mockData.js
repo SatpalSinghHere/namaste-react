@@ -1,24 +1,4 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-
-//
-//header
-//  logo
-//  Home
-//  Categories
-//  Help
-//  Cart
-//body
-//  Search
-//  card-container
-//      cards
-//footer
-//  Copyright
-//  Contact us
-//  Help
-//
-
-const data = {
+const DATA = {
     "restaurants": [
         {
             "info": {
@@ -1368,62 +1348,5 @@ const data = {
     ]
 }
 
-const Header = () => {
-    return (
-        <div className="header">
-            <img id="restaurent-logo" alt="app-logo" src="data:image/png;base64,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" />
-            <ul id="nav-items">
-                <li>Home</li>
-                <li>Categories</li>
-                <li>Help</li>
-                <li>Cart</li>
-            </ul>
-        </div>
-    )
-}
+export default DATA;
 
-const Card = (props) => {
-    const {name, avgRating, locality, areaName, costForTwo, cuisines, cloudinaryImageId} = props.restaurant.info;
-    const {link} = props.restaurant.cta;
-    
-    return (
-        <div id="card-base" onClick={()=>{window.open(link)}}>
-            <div id="card">
-                <div id="food-image-div">
-                    <img id="food-image" alt="food-image" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId} />
-                </div>
-                
-                <div id="card-title">
-                    <div id="res-name">
-                        {name}
-                    </div>
-                    <div id="food-rating">{avgRating}</div>
-                </div>
-                <hr></hr>
-                <div id="restaurent-name">{cuisines.join(", ")}</div>
-                {locality}, {areaName}
-            </div>
-        </div>
-
-    )
-}
-
-const Body = (props) => {
-    const {restaurants} = props.data;
-    
-    return (
-        <div className='body'>
-            {/* <input type="text" /> */}
-            <div id="card-container">
-                {restaurants.map((restaurant)=>{
-                    return <Card restaurant={restaurant} key={restaurant.info.id}/>
-                })}
-                
-            </div>
-        </div>
-    )
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render([<Header key={1} />, <Body data={data} key={2}/>]);
